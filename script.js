@@ -9,7 +9,7 @@ button.addEventListener("click",()=>{
     console.log("calculando...")
     let s = []
    
-    resultado.innerHTML = `<p>distancia entre dobradicas ${result.distancia_entre_dobradicas} </p> <br> <p> distancia da ponta =<br> ${result.medidas_da_ponta.join("<br>")} </p> `
+    resultado.innerHTML = `<div id="conteudo_modal"><p>distancia entre dobradicas ${result.distancia_entre_dobradicas}cm </p><p> distancia da ponta =<br> ${result.medidas_da_ponta.join("cm<br>")}cm</p> </div>`
 
 })
 
@@ -21,15 +21,16 @@ function calculate(){
   console.log([doorSize,qtdDobradicas])
 
   const distancia_entre_dobradicas = (doorSize - 20) / (qtdDobradicas - 1)
-  const medidas_da_ponta = [10]
+  const medidas_da_ponta = [10.00]
   const repeticoes =  qtdDobradicas%2 == 0 ? qtdDobradicas / 2 - 1: Math.floor(qtdDobradicas/2)
   console.log(repeticoes)
   for(i = 0;i < repeticoes ; i++){
-    medidas_da_ponta[i+1] = medidas_da_ponta[i] +  distancia_entre_dobradicas
+    medidas_da_ponta[i+1] = (medidas_da_ponta[i] +  distancia_entre_dobradicas).toFixed(2)
   }  
  
+  medidas_da_ponta[0] = (10.00).toFixed(2)
   return{
-        distancia_entre_dobradicas:distancia_entre_dobradicas,
+        distancia_entre_dobradicas:distancia_entre_dobradicas.toFixed(2),
         medidas_da_ponta: medidas_da_ponta
   }
   

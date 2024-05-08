@@ -1,3 +1,65 @@
+ button, select,input{
+  border-radius: 3px;
+  height: 40px;
+  width: 120px;
+  text-align: center;
+  font-size: 28px;
+}
+/* id="conteudo_modal"> */
+
+#resultado{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+#conteudo_modal{
+  height: 300px;
+}
+
+p{
+  font-size: 28px;
+}
+
+button{background-color:rgb(202, 153, 18)}
+
+label{
+  font-size:24px ;
+}
+
+label, input, select, button{
+  margin-top: 20px;
+}
+
+#content{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height:99vh
+}
+
+.copy-right-sec a {
+text-decoration: none;
+font-size: 20px;
+color: rgb(202, 153, 18);
+}
+
+.copy-right-sec{
+  font-size: 16px;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
